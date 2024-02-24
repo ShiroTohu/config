@@ -59,19 +59,38 @@ Address = 10.10.26.1/25, 10.10.26.129/25
 Well in this case, probably can look to add local ip address of the OpenMediaVault NAS so that it looks like this. Not too sure though.
 
 ```
-Address = 10.10.26.1/25, 10.10.26.129/25, 192.168.0.44/32
+Address = 10.10.26.1/25, 10.10.26.129/25
 ```
+
+I have absolutely no clue how to make it so that I can access the NAS with wireguard. I had a look here https://wiki.omv-extras.org/ since they have wireguard options, but I don't know whether that creates the interface like how PiVPN does it.
 
 For future you might want to look at this: https://docs.pivpn.io/wireguard/#pi-hole-with-pivpn but there is no real use for it at the moment that I can think off.
 
+https://forum.openmediavault.org/index.php?thread/40438-how-to-install-wireguard-vpn-in-docker-server-mode/
+
+https://forum.openmediavault.org/index.php?thread/43942-how-to-configure-wireguard-vpn-server-on-the-host/
+
 ## IPTables
+IPTables has three default tables INPUT, FORWARD, and OUTPUT
+
+> [!CAUTION]
+> DO NOT USE THESE IPTABLE RULES, THERE ARE HERE FOR REFERENCE PURPOSES AT THE MOMENT.
+
 ```
-# what in the world?
+# This isn't a IPtables rule thing
 iptables -A INPUT -i wg0 -p tcp --dport 22 -j DROP
 iptables -A INPUT -i wg0 -p tcp --dport 25565 -j ACCEPT
 iptables -A INPUT -i wg0 -j DROP
 
 iptables -A FORWARD -i wg0 -o wlan0 -j DROP
+
+iptables -A FORWARD -i enp2s0 -o %i -j ACCEPT; 
+iptables -A FORWARD -i %i -o enp2s0 -j ACCEPT; 
+iptables -t nat -A POSTROUTING -s 10.15.15.0/32 -o enp2s0 -j MASQUERADE
+
+PostDown = iptables -D FORWARD -i enp2s0 -o %i -j ACCEPT;
+iptables -D FORWARD i %i -o enp2s0 -j ACCEPT;
+iptables -t nat -D POSTROUTING -o enp2s0 -j MASQUERADE
 ```
 
 
