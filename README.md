@@ -1,5 +1,7 @@
 # Config
 
+> [!WARNING]
+> This is still in the works so everything is a little all over the place.
 
 ## Dual Boot Configuration
 Generally aesthecially speaking I want the GRUB bootloader to be the main bootloader instead of the prebuilt windows one. Though, it isn't a big deal If it's not possible.
@@ -40,10 +42,19 @@ https://github.com/pirate/wireguard-docs
 I use wireguard as my way to connect to my raspberry pi
 
 I want to subnet since I have two seperate networks that I want to manage
-`Address = 10.10.26.1/25, 10.10.26.129/25`
+```
+Address = 10.10.26.1/25, 10.10.26.129/25
+```
 
-For future you might want to look at this: https://docs.pivpn.io/wireguard/#pi-hole-with-pivpn
+> Defines what address range the local node should route traffic for. Depending on whether the node is a simple client joining the VPN subnet, or a bounce server that's relaying traffic between multiple clients, this can be set to a single IP of the node itself (specified with CIDR notation), e.g. 192.0.2.3/32), or a range of IPv4/IPv6 subnets that the node can route traffic for.
 
+Well in this case, probably can look to add local ip address of the OpenMediaVault NAS so that it looks like this. Not too sure though.
+
+```
+Address = 10.10.26.1/25, 10.10.26.129/25, 192.168.0.44/32
+```
+
+For future you might want to look at this: https://docs.pivpn.io/wireguard/#pi-hole-with-pivpn but there is no real use for it at the moment that I can think off.
 
 ## Storage
 For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it centralized.
