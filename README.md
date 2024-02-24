@@ -36,6 +36,12 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 
 
+### Windows 
+To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
+
+Then you type the username and password of the user designated by OpenMediaVault.
+
+
 ## WireGuard Configuration
 https://github.com/pirate/wireguard-docs
 
@@ -89,10 +95,4 @@ From there I enabled:
  - Added the shared folder for both of these.
 
 change the port as well because PiHole and a bunch of other things will use it.
-
-
-### Windows 
-To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
-
-Then you type the username and password of the user designated by OpenMediaVault.
 
