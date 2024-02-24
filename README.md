@@ -1,7 +1,9 @@
 # Config
 
+
 > [!WARNING]
 > This is still in the works so everything is a little all over the place.
+
 
 ## Dual Boot Configuration
 Generally aesthecially speaking I want the GRUB bootloader to be the main bootloader instead of the prebuilt windows one. Though, it isn't a big deal If it's not possible.
@@ -61,6 +63,17 @@ Address = 10.10.26.1/25, 10.10.26.129/25, 192.168.0.44/32
 ```
 
 For future you might want to look at this: https://docs.pivpn.io/wireguard/#pi-hole-with-pivpn but there is no real use for it at the moment that I can think off.
+
+## IPTables
+```
+# what in the world?
+iptables -A INPUT -i wg0 -p tcp --dport 22 -j DROP
+iptables -A INPUT -i wg0 -p tcp --dport 25565 -j ACCEPT
+iptables -A INPUT -i wg0 -j DROP
+
+iptables -A FORWARD -i wg0 -o wlan0 -j DROP
+```
+
 
 ## Storage
 For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it centralized.
