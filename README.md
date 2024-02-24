@@ -19,6 +19,8 @@ https://ubuntuforums.org/showthread.php?t=2440670
 https://github.com/gortbrown/ga502-ubuntu
 https://gitlab.com/asus-linux/asusctl
 
+
+## Ubuntu
 https://github.com/i3/i3
 https://github.com/yshui/picom
 https://github.com/borisfaure/terminology
@@ -27,10 +29,12 @@ https://github.com/aristocratos/bashtop
 https://github.com/powerline/powerline I think I used something else not sure forgot to document
 https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
 
-
+Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 
 
 ## WireGuard Configuration
+https://github.com/pirate/wireguard-docs
+
 I use wireguard as my way to connect to my raspberry pi
 
 I want to subnet since I have two seperate networks that I want to manage
