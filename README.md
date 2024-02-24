@@ -10,6 +10,25 @@ https://ubuntu.com/download/desktop
 
 Go for the not LTS version release but the absolute most latest version at the time of writing it was Ubuntu 23.10. This is because there was issues installing i3wm-gaps last time I installed, but it's probably been fixed by now.
 
+https://www.youtube.com/watch?v=mXyN1aJYefc
+https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader
+
+
+## ROG Zephyrus GA502DU
+https://ubuntuforums.org/showthread.php?t=2440670
+https://github.com/gortbrown/ga502-ubuntu
+https://gitlab.com/asus-linux/asusctl
+
+https://github.com/i3/i3
+https://github.com/yshui/picom
+https://github.com/borisfaure/terminology
+https://github.com/dylanaraps/neofetch
+https://github.com/aristocratos/bashtop
+https://github.com/powerline/powerline I think I used something else not sure forgot to document
+https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
+
+
+
 
 ## WireGuard Configuration
 I use wireguard as my way to connect to my raspberry pi
