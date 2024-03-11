@@ -77,20 +77,20 @@ IPTables has three default tables INPUT, FORWARD, and OUTPUT
 > DO NOT USE THESE IPTABLE RULES, THERE ARE HERE FOR REFERENCE PURPOSES AT THE MOMENT.
 
 ```
-# This isn't a IPtables rule thing
+# Allow certain IP Addresses to access SSH
+iptables -A INPUT -p tcp --dport 22 -s 10.10.10.2 -j ACCEPT
+iptables -A INPUT -p tcp --dport 22 -s 10.10.10.11 -j ACCEPT
 iptables -A INPUT -i wg0 -p tcp --dport 22 -j DROP
+
+# Minecraft Server
 iptables -A INPUT -i wg0 -p tcp --dport 25565 -j ACCEPT
 iptables -A INPUT -i wg0 -j DROP
 
+# OpenMediaVault
+iptables -A FORWARD -i wg0 -o wlan -d 192.168.0.5 -j ACCEPT
+
+# Disallow forwarding to devices in the local network
 iptables -A FORWARD -i wg0 -o wlan0 -j DROP
-
-iptables -A FORWARD -i enp2s0 -o %i -j ACCEPT; 
-iptables -A FORWARD -i %i -o enp2s0 -j ACCEPT; 
-iptables -t nat -A POSTROUTING -s 10.15.15.0/32 -o enp2s0 -j MASQUERADE
-
-PostDown = iptables -D FORWARD -i enp2s0 -o %i -j ACCEPT;
-iptables -D FORWARD i %i -o enp2s0 -j ACCEPT;
-iptables -t nat -D POSTROUTING -o enp2s0 -j MASQUERADE
 ```
 
 
