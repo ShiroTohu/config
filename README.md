@@ -2,7 +2,7 @@
 
 
 > [!WARNING]
-> This is still in the works so everything is a little all over the place.
+> This is in progress.
 
 
 ## Dual Boot Configuration
@@ -19,7 +19,7 @@ Go for the not LTS version release but the absolute most latest version at the t
 
 
 ## ROG Zephyrus GA502DU
-This is the laptop that I use... it's alright, just wish the battery didn't die on me so often haha.
+This is the laptop that I use... it's alright, just wish the battery didn't die on me so often.
 
 - https://ubuntuforums.org/showthread.php?t=2440670
 - https://github.com/gortbrown/ga502-ubuntu
@@ -95,7 +95,7 @@ iptables -t nat -D POSTROUTING -o enp2s0 -j MASQUERADE
 
 
 ## Storage
-For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it centralized.
+For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it more centralized.
 
 I also wanted to try something new and seeing whether this is something that I will like better in the long run rather than syncthing.
 
@@ -128,3 +128,6 @@ From there I enabled:
 
 change the port as well because PiHole and a bunch of other things will use it.
 
+
+### OpenMediaVault Performance w/ Obsidian
+Using OpenMediaVault with Obsidian is not that bad, if you are in a remote location and the internet is good then you won't really see any noticable stutters from when obsidian tries autosaving. Though when the internet is spotty, you often have to wait a bit before the program starts up again.
