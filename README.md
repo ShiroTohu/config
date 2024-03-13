@@ -53,6 +53,11 @@ For easy install of all dependecies.
 > Install Script hasn't been coded yet
 
 
+### Setting up GitHub on Linux
+GitHub is much less straight forward to setup on linux as it doesn't have a credential manager like windows does, I'm pretty sure you can use
+https://github.com/git-ecosystem/git-credential-manager but I had no luck using that for some odd reason (might look into that). Though I think it might be wise to use ssh keys instead. (this section documents the process of doing that).
+
+
 ### Windows 
 To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
 
