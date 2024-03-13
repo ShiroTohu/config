@@ -43,6 +43,12 @@ Inspirations:
  - [Garuda Sway Config](https://github.com/yurihikari/garuda-sway-config)
 
 
+### Install Script
+For easy install of all dependecies.
+> [!WARNING]
+> Install Script hasn't been coded yet
+
+
 ### Windows 
 To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
 
