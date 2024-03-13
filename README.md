@@ -40,7 +40,7 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 Inspirations:
- - [Garuda Sawy Config](https://github.com/yurihikari/garuda-sway-config)
+ - [Garuda Sway Config](https://github.com/yurihikari/garuda-sway-config)
 
 
 ### Windows 
