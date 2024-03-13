@@ -41,10 +41,12 @@ exec_always --no-startup-id feh --bg-fill /path/to/your/image.jpg
 - https://github.com/powerline/powerline I think I used something else not sure forgot to document
 - https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
 - https://github.com/davatorium/rofi
+- https://github.com/betterlockscreen/betterlockscreen
 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 Inspirations:
  - [Garuda Sway Config](https://github.com/yurihikari/garuda-sway-config)
+ - [i3wm Nord](https://github.com/TheDistroHopper/i3wm-nord)
 
 
 ### Install Script
