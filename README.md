@@ -28,6 +28,10 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 
 ## Ubuntu
 
+```
+exec_always --no-startup-id feh --bg-fill /path/to/your/image.jpg
+```
+
 ### Dependencies
 - https://github.com/i3/i3
 - https://github.com/yshui/picom
