@@ -8,7 +8,7 @@
 ## Dual Boot Configuration
 Generally aesthecially speaking I want the GRUB bootloader to be the main bootloader instead of the prebuilt windows one. Though, it isn't a big deal If it's not possible.
 
-Windows installs just fine on my Laptop, spam F5 on reboot and go through the boot loader thingy.
+Windows installs just fine on my Laptop, spam `F5` on reboot and go through the boot loader thingy.
 
 https://ubuntu.com/download/desktop
 
@@ -36,6 +36,8 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 - https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
+Inspirations:
+ - [Garuda Sawy Config](https://github.com/yurihikari/garuda-sway-config)
 
 
 ### Windows 
@@ -69,6 +71,7 @@ For future you might want to look at this: https://docs.pivpn.io/wireguard/#pi-h
 https://forum.openmediavault.org/index.php?thread/40438-how-to-install-wireguard-vpn-in-docker-server-mode/
 
 https://forum.openmediavault.org/index.php?thread/43942-how-to-configure-wireguard-vpn-server-on-the-host/
+
 
 ## IPTables
 IPTables has three default tables INPUT, FORWARD, and OUTPUT
