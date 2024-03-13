@@ -60,6 +60,12 @@ GitHub is much less straight forward to setup on linux as it doesn't have a cred
 https://github.com/git-ecosystem/git-credential-manager but I had no luck using that for some odd reason (might look into that). Though I think it might be wise to use ssh keys instead. (this section documents the process of doing that).
 
 
+### Custom Login Screen
+One of the things that intrigue me is a custom login screen, one of the solutions proposed since it is quite difficult to cusomize the login screen on ubuntu anyways was to make it login automatically and execute i3lock or an equivalent on bootup.
+
+ - https://github.com/betterlockscreen/betterlockscreen
+
+
 ### Windows 
 To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
 
