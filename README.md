@@ -89,6 +89,7 @@ IPTables has three default tables INPUT, FORWARD, and OUTPUT
 > DO NOT USE THESE IPTABLE RULES, THERE ARE HERE FOR REFERENCE PURPOSES AT THE MOMENT.
 
 ```
+# preup.sh
 # Allow certain IP Addresses to access SSH
 iptables -A INPUT -p tcp --dport 22 -s 10.10.10.2 -j ACCEPT
 iptables -A INPUT -p tcp --dport 22 -s 10.10.10.11 -j ACCEPT
