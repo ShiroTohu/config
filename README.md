@@ -27,6 +27,8 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 
 
 ## Ubuntu
+
+### Dependencies
 - https://github.com/i3/i3
 - https://github.com/yshui/picom
 - https://github.com/borisfaure/terminology
@@ -34,6 +36,7 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 - https://github.com/aristocratos/bashtop
 - https://github.com/powerline/powerline I think I used something else not sure forgot to document
 - https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
+- https://github.com/davatorium/rofi
 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 Inspirations:
@@ -95,7 +98,6 @@ iptables -A FORWARD -i wg0 -o wlan -d 192.168.0.5 -j ACCEPT
 # Disallow forwarding to devices in the local network
 iptables -A FORWARD -i wg0 -o wlan0 -j DROP
 ```
-
 
 ## Storage
 For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it more centralized.
