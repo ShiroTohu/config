@@ -99,6 +99,16 @@ iptables -A FORWARD -i wg0 -o wlan -d 192.168.0.5 -j ACCEPT
 iptables -A FORWARD -i wg0 -o wlan0 -j DROP
 ```
 
+### Documentation and Reference
+ - `-A` flag specifies the table that the rule will be added to, these tables consists of INPUT, FORWARD and OUTPUT. There are also NAT tables such as PREROUTING and POSTROUTING.
+ - `-p` flag specifies the protocol which usually is TCP or UDP.
+ - `--dport` flag specifies the destination port
+ - `-s` source IP address
+ - `-d` desintation IP address
+ - `-J` what to do with the packet, you can DROP, ACCEPT or MASQUERADE it.
+   - https://superuser.com/questions/935969/what-is-masquerade-made-for (Masquerading is basically NAT)
+
+
 ## Storage
 For storage I wanted something that could both be accessible from both my laptop and desktop and something that I could access in a linux environment. I thought about using Syncthing for syncthing files across all devices, but decided against it, since I wanted it more centralized.
 
