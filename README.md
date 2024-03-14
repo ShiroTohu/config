@@ -32,6 +32,14 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 exec_always --no-startup-id feh --bg-fill /path/to/your/image.jpg
 ```
 
+Then you want to set the default start app to terminology and set the background opacity to 85% enabling translucency
+
+> [!NOTE]
+> Just want to state that translucency wasn't working until I installed picom and rebooted my machine, whether that is a coincidence
+> or that terminology relies on a compositor to be installed in unknown to me. It would probably be worth to look into that on a virtual
+> machine sometime.
+
+
 ### Dependencies
 - https://github.com/i3/i3
 - https://github.com/yshui/picom
