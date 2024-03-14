@@ -50,6 +50,8 @@ Then you want to set the default start app to terminology and set the background
 - https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
 - https://github.com/davatorium/rofi
 - https://github.com/betterlockscreen/betterlockscreen
+- https://github.com/polybar/polybar
+
 
 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
 Inspirations:
