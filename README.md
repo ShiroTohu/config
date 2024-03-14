@@ -2,7 +2,7 @@
 
 
 > [!WARNING]
-> This is in progress.
+> This is in progress and is bound to get a rewrite sometime in the future.
 
 
 ## Dual Boot Configuration
