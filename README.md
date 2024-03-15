@@ -30,6 +30,9 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 
 ```
 exec_always --no-startup-id feh --bg-fill /path/to/your/image.jpg
+
+gaps inner 4
+default_border none
 ```
 
 Then you want to set the default start app to terminology and set the background opacity to 85% enabling translucency
