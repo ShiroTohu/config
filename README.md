@@ -45,6 +45,8 @@ Then you want to set the default start app to terminology and set the background
 - https://github.com/yshui/picom
 - https://github.com/borisfaure/terminology
 - https://github.com/dylanaraps/neofetch
+  - https://github.com/dylanaraps/neofetch/wiki/Custom-Ascii-art-file-format (Custom ASCII documentation)
+  - https://github.com/dylanaraps/neofetch/wiki/Images-in-the-terminal (Images in the Terminal)
 - https://github.com/aristocratos/bashtop
 - https://github.com/powerline/powerline I think I used something else not sure forgot to document
 - https://github.com/derf/feh If I'm not mistaken I used feh to set the wallpaper
