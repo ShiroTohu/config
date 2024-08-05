@@ -1,4 +1,4 @@
-# Config
+# Setup Documentation
 
 
 > [!WARNING]
@@ -28,12 +28,15 @@ This is the laptop that I use... it's alright, just wish the battery didn't die 
 
 ## Ubuntu
 
+![Display image](VirtualBox_Ubuntu_15_03_2024_13_32_47.png)
+
 ```
 exec_always --no-startup-id feh --bg-fill /path/to/your/image.jpg
 
 gaps inner 4
 default_border none
 ```
+
 
 Then you want to set the default start app to terminology and set the background opacity to 85% enabling translucency
 
@@ -58,7 +61,7 @@ Then you want to set the default start app to terminology and set the background
 - https://github.com/polybar/polybar
 
 
-Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg
+5/08/2024 Wallpaper credit: https://twitter.com/dino_illus/status/1618947057192173568?t=iWFKlDRCUYe3LteniwmAjg (By Dino)
 Inspirations:
  - [Garuda Sway Config](https://github.com/yurihikari/garuda-sway-config)
  - [i3wm Nord](https://github.com/TheDistroHopper/i3wm-nord)
@@ -173,7 +176,7 @@ look to change the password to something stronger after you log in.
 
 I wiped my Hard drive and configured it to use EXT4 so that both windows and linux can use it. You need to set the auto logout timer to 1 day so that you can be sure the harddrive has actually wiped.
 
-Created a shared folder named `TurtleNAS`
+Created a shared folder named `TurtleNAS` (you can name this anything you want, but this is what I choose)
 
 From there I enabled:
  - NFS (For Linux and Mac) with the client set as my local network subnet mask
@@ -185,3 +188,29 @@ change the port as well because PiHole and a bunch of other things will use it.
 
 ### OpenMediaVault Performance w/ Obsidian
 Using OpenMediaVault with Obsidian is not that bad, if you are in a remote location and the internet is good then you won't really see any noticable stutters from when obsidian tries autosaving. Though when the internet is spotty, you often have to wait a bit before the program starts up again.
+
+
+### Forgetting Port Number
+When setting up OpenMediaVault you'll most likely change the port number. This is because some web applications that reside on your pi might already be occupying that port. There might come a time where you forget the port number, you can find it using this command:
+
+```
+sudo grep 'listen' /etc/nginx/sites-available/openmediavault-webgui
+```
+
+
+## Installing Syncthing
+
+> TODO
+
+## Finding the External HardDrive
+The harddrive mounting point can be found using the `df` command with the `-h` flag as so:
+
+```
+df -h
+```
+
+The command should return a bunch of items, the things you want to focus on are the names listed "FileSystem" and the AvailableSpace that file system has. then cd into the mount point of that file system, for example:
+
+```
+ /srv/ExternalDrive
+```
