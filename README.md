@@ -222,6 +222,27 @@ sudo grep 'listen' /etc/nginx/sites-available/openmediavault-webgui
 ```
 
 
+### Connecting to File Share
+Two packages are required in order to connect to the File Share system.
+ - `smbclient`
+ - `cifs-utils` (This is needed otherwise it will state that the folder you want to mount to is read only)
+
+First see the name of the file share using:
+```
+smbclient -L //server_ip --user username
+```
+
+Then make a directory in the root `mnt/` directory to mount the remote folder, I recommend naming it the same name as the shared folder.
+```
+mkdir /mnt/folder
+```
+
+Then mount the remote folder with:
+```
+sudo mount -t cifs -o username=username //server_ip/folder /mnt/folder
+```
+
+
 ## Installing Syncthing
 
 > TODO
