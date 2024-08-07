@@ -18,6 +18,16 @@ Go for the not LTS version release but the absolute most latest version at the t
 - https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader
 
 
+### Parititon Size
+The goal here is to focus on a system that is small and minimal. The partition size should be not exceed 100GB as that is too much and will probably start interfering with Windows as the programs I install there are quite heavy.
+
+https://help.ubuntu.com/community/DiskSpace
+
+ - Root Partition (40GB) 
+ - SWAP (very reccommended) (20GB)
+ - Home Partition (20GB) (Probably just used for notes)
+
+
 ## ROG Zephyrus GA502DU
 This is the laptop that I use... it's alright, just wish the battery didn't die on me so often.
 
@@ -140,6 +150,7 @@ iptables -A FORWARD -i wg0 -o wlan -d 192.168.0.5 -j ACCEPT
 # Disallow forwarding to devices in the local network
 iptables -A FORWARD -i wg0 -o wlan0 -j DROP
 ```
+
 
 ### Documentation and Reference
  - `-A` flag specifies the table that the rule will be added to, these tables consists of INPUT, FORWARD and OUTPUT. There are also NAT tables such as PREROUTING and POSTROUTING.
