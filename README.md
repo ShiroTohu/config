@@ -75,6 +75,7 @@ Then you want to set the default start app to terminology and set the background
 Inspirations:
  - [Garuda Sway Config](https://github.com/yurihikari/garuda-sway-config)
  - [i3wm Nord](https://github.com/TheDistroHopper/i3wm-nord)
+ - [NieR:Automata](https://www.reddit.com/r/unixporn/comments/bngsiy/i3gaps_nierautomata_first_encounter_with_my_ricer/)
 
 
 ### Applications
@@ -103,6 +104,13 @@ One of the things that intrigue me is a custom login screen, one of the solution
 To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
 
 Then you type the username and password of the user designated by OpenMediaVault.
+
+
+# Network Configuration
+
+- `51820` for wireguard
+- `4242` for openmediavault
+- `4343` for syncthing
 
 
 ## WireGuard Configuration
