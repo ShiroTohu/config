@@ -77,6 +77,11 @@ Inspirations:
  - [i3wm Nord](https://github.com/TheDistroHopper/i3wm-nord)
 
 
+### Applications
+ - https://github.com/Rigellute/spotify-tui
+ - https://neovim.io/
+
+
 ### Install Script
 For easy install of all dependecies.
 > [!WARNING]
