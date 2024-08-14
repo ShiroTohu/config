@@ -227,6 +227,12 @@ Two packages are required in order to connect to the File Share system.
  - `smbclient`
  - `cifs-utils` (This is needed otherwise it will state that the folder you want to mount to is read only)
 
+To install cifs-utils type the following command:
+```
+sudo apt-get install cifs-utils
+```
+This is used to mount the samba share to your local machine.
+
 First see the name of the file share using:
 ```
 smbclient -L //server_ip --user username
@@ -237,15 +243,38 @@ Then make a directory in the root `mnt/` directory to mount the remote folder, I
 mkdir /mnt/folder
 ```
 
-Then mount the remote folder with:
+There are two methods you can do to mount the fileshare onto your system
+ - manually
+ - automatic using fstab
+
+To mount the remote folder manually:
 ```
 sudo mount -t cifs -o username=username //server_ip/folder /mnt/folder
 ```
 
+To mount the remote folder automatically, add a entry in your fstab file located at `/etc/fstab` then add
+```
+//share_ip/share_folder mount/folder/location cifs credentials=/home/username/.smbcredentials 0 0
+```
+
+in the credentials file write the username, password, and workgroup
 
 ## Installing Syncthing
 
-> TODO
+Syncthing is needed because accessing files within the NAS using software such as obsidian or ranger results in poor performance. Therefore Syncthing was used to localize and sync files across both the NAS and the local computer. This allows us to use the NAS as for bigger more resource intensive files while also utilizing the large harddrive space of the share.
+
+install Syncthing:
+
+```
+sudo apt install syncthing
+```
+
+Then configure the file share. It's not too difficult but I'll list some stuff here.
+ - Make sure that the syncthing server on the NAS has a username and password.
+ - Share folder using ID.
+ - Make a folder under `Sync/` on the your local machine.
+    - The benefit of having it under the`Sync` folder is that it separates it from all your other files. It gives peace of mind that if you delete something in documents or elsewhere it won't be on the share. (Because backing up files hasn't been configured yet)
+
 
 ## Finding the External HardDrive
 The harddrive mounting point can be found using the `df` command with the `-h` flag as so:
