@@ -28,6 +28,13 @@ https://help.ubuntu.com/community/DiskSpace
  - Home Partition (20GB) (Probably just used for notes)
 
 
+## Desktop Environment
+use `arandr` to arrange monitors to liking. To change refresh rate use
+```
+xrandr --output DP-2 --mode 1920x1080 --rate 144.00
+```
+
+
 ## ROG Zephyrus GA502DU
 This is the laptop that I use... it's alright, just wish the battery didn't die on me so often.
 
