@@ -34,7 +34,8 @@ xrandr --output DP-2 --mode 1920x1080 --rate 144.00
 xrandr --output HDMI-1 --rotate right --right-of DP-2
 ```
 
-To make these settings persist on reboot, put exec before the command in the i3 config file
+To make these settings persist on reboot, put `exec --no-startup-id` before the command in the i3 config file. There isn't really a reason why it should be `exec_always`
+
 
 ## ROG Zephyrus GA502DU
 This is the laptop that I use... it's alright, just wish the battery didn't die on me so often.
@@ -105,6 +106,19 @@ One of the things that intrigue me is a custom login screen, one of the solution
 
  - https://github.com/betterlockscreen/betterlockscreen
 
+
+## Debugging and Crash Logs
+Useful commands:
+```
+journalctl -xe
+```
+
+Useful Directories
+```
+/var/log
+/var/crash
+~/.xsession-errors
+```
 
 ### Windows 
 To mount the NAS on windows you go to "Add a Network Location", and then type `\\{ip_address_of_NAS}\{shared_folder}` with both the `ip_address_of_NAS` and `shared_folder` being replaced by their respective counterparts.
