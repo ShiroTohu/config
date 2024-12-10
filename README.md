@@ -29,11 +29,12 @@ https://help.ubuntu.com/community/DiskSpace
 
 
 ## Desktop Environment
-use `arandr` to arrange monitors to liking. To change refresh rate use
 ```
 xrandr --output DP-2 --mode 1920x1080 --rate 144.00
+xrandr --output HDMI-1 --rotate right --right-of DP-2
 ```
 
+To make these settings persist on reboot, put exec before the command in the i3 config file
 
 ## ROG Zephyrus GA502DU
 This is the laptop that I use... it's alright, just wish the battery didn't die on me so often.
@@ -97,9 +98,7 @@ For easy install of all dependecies.
 
 
 ### Setting up GitHub on Linux
-GitHub is much less straight forward to setup on linux as it doesn't have a credential manager like windows does, I'm pretty sure you can use
-https://github.com/git-ecosystem/git-credential-manager but I had no luck using that for some odd reason (might look into that). Though I think it might be wise to use ssh keys instead. (this section documents the process of doing that).
-
+You can setup github by using [github cli](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git), make sure to install it using apt otherwise you WILL run into issues.
 
 ### Custom Login Screen
 One of the things that intrigue me is a custom login screen, one of the solutions proposed since it is quite difficult to cusomize the login screen on ubuntu anyways was to make it login automatically and execute i3lock or an equivalent on bootup.
