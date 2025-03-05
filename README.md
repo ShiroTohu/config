@@ -308,3 +308,11 @@ The command should return a bunch of items, the things you want to focus on are 
 ```
  /srv/ExternalDrive
 ```
+
+## ProxMox
+You can combine nodes together by clustering them together under the cluster tab.
+
+You can also download LXC containers from the node's command line or via the web gui. Just make sure to assign a IP address manually or using DHCP otherwise you will get name resolution errors.
+
+## JellyFin
+Put media in the `/media/` directory instead of home because JellyFin can't read there without permissions. Therefore it is better to just place it under media in the root directory.
