@@ -2,7 +2,7 @@
 
 
 > [!WARNING]
-> This is in progress and is bound to get a rewrite sometime in the future.
+> This project has been archieved because I now use a different computer. I also set up things differently on my new computer that isn't documented here.
 
 
 ## Dual Boot Configuration
